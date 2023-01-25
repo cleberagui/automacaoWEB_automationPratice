@@ -4,19 +4,17 @@ Resource    Page/CadastroPage.robot
 Resource    Page/MinhaContaPage.robot
 
 *** Keywords ***
-Dado que usuario esteja na pagina principal
-    Abrindo Navegador
+Dado que o usuário esteja na página principal 
+    Inicio da Sessão
     Acessando site
-Quando clicar em Cadastro
     Clicando botao Cadastro
+Quando o usuário cadastrar um novo cliente 
     Verificando pagina de Cadastro
-E preencher todos os dados validos
     Preenchendo nome
     Preenchendo E-mail
     Preenchendo Senha
-E clicar em cadastrar
     Clicando Botao Cadastrar
-Então usuario deve ser cadastrado com sucesso!
+Então o cadastro deve ser concluído com sucesso
     Verificando se o cadastro foi concluido
     
-
+    Fim da Sessão
