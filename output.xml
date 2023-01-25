@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.1 on darwin)" generated="20230125 14:35:37.445" rpa="false" schemaversion="3">
+<suite id="s1" name="Tests" source="/Users/cleberaguiar/Projetos/automacaoWEB_automationPratice/tests.robot">
+<test id="s1-t1" name="CN0001-Cadastro de usuário com sucesso" line="6">
+<kw name="Dado que usuario esteja na pagina principal" library="kws">
+<kw name="Abrindo Navegador" library="HomePage">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230125 14:35:38.808" level="INFO">Opening browser 'Chrome' to base url 'http://automationpratice.com.br/'.</msg>
+<status status="PASS" starttime="20230125 14:35:38.808" endtime="20230125 14:35:56.194"/>
+</kw>
+<status status="PASS" starttime="20230125 14:35:38.807" endtime="20230125 14:35:56.195"/>
+</kw>
+<kw name="Acessando site" library="HomePage">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Button_Cadastro}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230125 14:35:56.196" endtime="20230125 14:35:56.237"/>
+</kw>
+<status status="PASS" starttime="20230125 14:35:56.195" endtime="20230125 14:35:56.237"/>
+</kw>
+<status status="PASS" starttime="20230125 14:35:38.806" endtime="20230125 14:35:56.238"/>
+</kw>
+<kw name="Quando clicar em Cadastro" library="kws">
+<kw name="Clicando botao Cadastro" library="HomePage">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Button_Cadastro}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230125 14:35:56.240" level="INFO">Clicking element 'css:[class='fa fa-lock']'.</msg>
+<status status="PASS" starttime="20230125 14:35:56.239" endtime="20230125 14:35:56.302"/>
+</kw>
+<status status="PASS" starttime="20230125 14:35:56.239" endtime="20230125 14:35:56.302"/>
+</kw>
+<kw name="Verificando pagina de Cadastro" library="CadastroPage">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Input_Name}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230125 14:35:56.303" endtime="20230125 14:35:56.754"/>
+</kw>
+<status status="PASS" starttime="20230125 14:35:56.303" endtime="20230125 14:35:56.754"/>
+</kw>
+<status status="PASS" starttime="20230125 14:35:56.238" endtime="20230125 14:35:56.754"/>
+</kw>
+<kw name="E preencher todos os dados validos" library="kws">
+<kw name="Preenchendo nome" library="CadastroPage">
+<kw name="Name" library="FakerLibrary">
+<var>${Name}</var>
+<doc>:example 'John Doe'</doc>
+<msg timestamp="20230125 14:35:56.758" level="INFO">${Name} = Rachel Ramirez</msg>
+<status status="PASS" starttime="20230125 14:35:56.756" endtime="20230125 14:35:56.759"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Input_Name}</arg>
+<arg>${name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230125 14:35:56.760" level="INFO">Typing text 'Rachel Ramirez' into text field 'id:user'.</msg>
+<status status="PASS" starttime="20230125 14:35:56.759" endtime="20230125 14:35:57.039"/>
+</kw>
+<status status="PASS" starttime="20230125 14:35:56.755" endtime="20230125 14:35:57.039"/>
+</kw>
+<kw name="Preenchendo E-mail" library="CadastroPage">
+<kw name="Email" library="FakerLibrary">
+<var>${Email}</var>
+<msg timestamp="20230125 14:35:57.041" level="INFO">${Email} = clarkkimberly@example.org</msg>
+<status status="PASS" starttime="20230125 14:35:57.040" endtime="20230125 14:35:57.041"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Input_Email}</arg>
+<arg>${Email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230125 14:35:57.042" level="INFO">Typing text 'clarkkimberly@example.org' into text field 'id:email'.</msg>
+<status status="PASS" starttime="20230125 14:35:57.041" endtime="20230125 14:35:57.198"/>
+</kw>
+<status status="PASS" starttime="20230125 14:35:57.040" endtime="20230125 14:35:57.198"/>
+</kw>
+<kw name="Preenchendo Senha" library="CadastroPage">
+<kw name="Password" library="FakerLibrary">
+<var>${Password}</var>
+<doc>Generate a random password of the specified ``length``.</doc>
+<msg timestamp="20230125 14:35:57.200" level="INFO">${Password} = 0!v2#z0tqM</msg>
+<status status="PASS" starttime="20230125 14:35:57.200" endtime="20230125 14:35:57.201"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Input_Password}</arg>
+<arg>${Password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230125 14:35:57.202" level="INFO">Typing text '0!v2#z0tqM' into text field 'id:password'.</msg>
+<status status="PASS" starttime="20230125 14:35:57.201" endtime="20230125 14:35:57.346"/>
+</kw>
+<status status="PASS" starttime="20230125 14:35:57.199" endtime="20230125 14:35:57.346"/>
+</kw>
+<status status="PASS" starttime="20230125 14:35:56.755" endtime="20230125 14:35:57.347"/>
+</kw>
+<kw name="E clicar em cadastrar" library="kws">
+<kw name="Clicando Botao Cadastrar" library="CadastroPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Button_Register}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230125 14:35:57.349" level="INFO">Clicking element 'id:btnRegister'.</msg>
+<status status="PASS" starttime="20230125 14:35:57.348" endtime="20230125 14:35:57.465"/>
+</kw>
+<status status="PASS" starttime="20230125 14:35:57.348" endtime="20230125 14:35:57.466"/>
+</kw>
+<status status="PASS" starttime="20230125 14:35:57.347" endtime="20230125 14:35:57.466"/>
+</kw>
+<kw name="Então usuario deve ser cadastrado com sucesso!" library="kws">
+<kw name="Verificando se o cadastro foi concluido" library="MinhaContaPage">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${RegisterConcluide}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230125 14:35:57.467" endtime="20230125 14:35:57.534"/>
+</kw>
+<status status="PASS" starttime="20230125 14:35:57.467" endtime="20230125 14:35:57.534"/>
+</kw>
+<status status="PASS" starttime="20230125 14:35:57.466" endtime="20230125 14:35:57.534"/>
+</kw>
+<status status="PASS" starttime="20230125 14:35:38.805" endtime="20230125 14:35:57.536"/>
+</test>
+<status status="PASS" starttime="20230125 14:35:37.452" endtime="20230125 14:35:57.541"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Tests">Tests</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20230125 14:35:38.792" level="ERROR">Error in file '/Users/cleberaguiar/Projetos/automacaoWEB_automationPratice/resources/base.robot' on line 4: Error in file '/Users/cleberaguiar/Projetos/automacaoWEB_automationPratice/tests.robot' on line 4: Resource file with 'Test Cases' section is invalid.</msg>
+</errors>
+</robot>

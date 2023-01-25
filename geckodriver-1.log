@@ -1,0 +1,14 @@
+1674659387663	geckodriver	INFO	Listening on 127.0.0.1:49513
+1674659388104	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "49514" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/p0/7g25294x3wq68chf_qjkdttr0000gn/T/rust_mozprofileoDJQfe"
+1674659388997	Marionette	INFO	Marionette enabled
+1674659389135	Marionette	INFO	Listening on port 49524
+Read port: 49524
+WebDriver BiDi listening on ws://127.0.0.1:49514
+1674659389521	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/p0/7g25294x3wq68chf_qjkdttr0000gn/T/rust_mozprofileoDJQfe/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:49514/devtools/browser/08051512-4dc9-40a2-8d35-f810bb1d6c27
+console.error: Region.sys.mjs: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.sys.mjs", 764))
+console.error: Region.sys.mjs: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.sys.mjs", 416))
+1674659492608	Marionette	INFO	Stopped listening on port 49524
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+!!! error running onStopped callback: TypeError: callback is not a function
